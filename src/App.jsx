@@ -1,7 +1,7 @@
 
 import './App.css'
-import CarouselEffect from './components/carousel/Carousel'
-import Header from './components/Header/Header'
+
+import Routing from './pages/route/Router'
 
 
 function App() {
@@ -10,8 +10,9 @@ function App() {
   return (
     <>
      
-      <Header />
-      <CarouselEffect />
+     <Routing />
+
+
     </>
   )
 }
