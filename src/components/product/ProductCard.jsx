@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 function ProductCard({ product, flex, renderDesc, renderAdd }) {
   // Destructure product object for easier access to properties
   const { image, title, id, rating, price, description } = product;
+  
 
   // Context access is currently commented out; would normally provide global cart state
   // const [state, dispatch] = useContext(DataContext);
@@ -32,6 +33,7 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       item: { image, title, id, rating, price, description }, // Product data to add to cart
     });
   };
+  console.log("Image URL:", image);
 
   return (
     // Card container with conditional flex class if 'flex' prop is true
@@ -43,6 +45,7 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       {/* Clickable product image, links to product details page */}
       <Link to={`/products/${id}`}>
         <img src={image} alt={title} />
+       
       </Link>
 
       <div>
